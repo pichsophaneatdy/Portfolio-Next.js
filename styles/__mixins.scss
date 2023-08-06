@@ -1,0 +1,178 @@
+@use "./_variables" as *;
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: 1280px) {
+        @content;
+    }
+}
+@mixin section-title-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+@mixin section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    z-index: 1;
+    @include tablet{
+        font-size: 26px ;
+    }
+    @include desktop {
+        font-size: 32px;
+    }
+}
+@mixin section-title-border {
+    position: absolute;
+    left: 0;
+    width: 110%;
+    height: 15px;
+    background-color: $green;
+    z-index: 0;
+}
+
+@mixin project-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    @include tablet{
+        font-size: 24px ;
+    }
+    @include desktop {
+        font-size:29px;
+    }
+}
+@mixin header {
+    background-color: $blue;
+    color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    } 
+    &__icon {
+        height: 22px;
+        @include tablet{
+            height: 25px;
+        }
+    }
+    &__right {
+        @include tablet{
+            display: none;
+        }
+    }
+    &__right__big__screen{
+        display: none;
+        @include tablet {
+            display: flex;
+            gap: 1.5rem;
+        }
+        @include desktop {
+            gap: 2.5rem;
+        }
+    }
+    &__menu__btn {
+        background-color: $blue;
+        border: none;
+        
+    }
+    &__menu__icon {
+        height: 30px;
+        position: relative;
+        z-index:1000
+    }
+    &__link {
+        color: white;
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 500;
+        &:hover {
+            color: $green;
+        }
+        @include desktop {
+            font-size: 0.9rem;
+        }
+    }
+    &__link__active {
+        color: $green;
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 500;
+        @include desktop {
+            font-size: 0.9rem;
+        }
+    }
+    &__link span {
+        margin-left: 0.6rem;
+    }
+    &__link__active span {
+        margin-left: 0.6rem;
+    }
+    &__anchor {
+        text-decoration: none;
+        
+    }
+    &__dropdown__menu {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        top: 0;
+        justify-content: end;
+        z-index:500;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__content {
+        color: white;
+        width: 100%;
+        background-color: $blue;
+        min-height: 100vh;
+        padding: 0.8rem;
+    }
+    &__nav {
+        margin-top: 2rem;
+    }
+    &__item {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 1rem 0 3rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        &:hover {
+            color: $green;
+        }
+    }
+    &__item__active {
+        color: $green;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 1rem 0 3rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+}
+
+@mixin page-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    @include tablet {
+        font-size: 1.8rem;
+    }
+    @include desktop {
+        font-size: 2.3rem;
+    }
+}

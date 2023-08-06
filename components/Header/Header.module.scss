@@ -1,0 +1,23 @@
+@use "../../styles/_mixins" as *;
+@use "../../styles/_variables" as *;
+
+.header {
+    border-radius: 25px;
+    @include header;
+    margin: 0.5rem;
+    padding: 0.3rem 5% 0.2rem 5%;
+    @include tablet {
+        margin: 1rem;
+        padding: 0.5rem 7% 0.3rem 7%; 
+    }
+}
+.header2 {
+    @include header;
+    padding: 1rem;
+    @include tablet{
+        padding: 1rem 7%;
+    }
+    @include desktop{
+        padding: 1rem 7%;
+    }
+}
