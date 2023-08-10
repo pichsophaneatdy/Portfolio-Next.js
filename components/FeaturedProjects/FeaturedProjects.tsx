@@ -1,6 +1,8 @@
 import {motion} from "framer-motion";
 import FeatureProject from "../FeatureProject/FeatureProject";
 import styles from "./FeaturedProjects.module.scss";
+import Link from "next/link";
+
 
 interface Project {
     date: string,
@@ -30,10 +32,17 @@ const FeaturedProjects = (props: {projects: Project[]}) => {
             </motion.div>
             {/* Render the project */}
             {
-                props.projects?.map((project: Project) => {
-                    return <FeatureProject project={project}/>
+                props.projects?.map((project: Project, index: number) => {
+                    return <FeatureProject key={index} project={project}/>
                 })
             }
+            {/* Link to full projects archive */}
+            <Link href="/projects"  className={styles.project__archive__link}>
+                <p>
+                    View Full Project Archive
+                </p>
+                <img src="/assets/link.png" alt="link icon" className={styles.project__archive}/>
+            </Link>
         </div>
     )
 }

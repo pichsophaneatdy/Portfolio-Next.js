@@ -11,7 +11,7 @@
             display: flex;
             gap: 2.5rem;
             padding-top: 2rem;
-            align-items: start;
+            align-items: flex-start;
         }   
     }
     &__title{
@@ -61,11 +61,11 @@
     }
     &__btn__container {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         position: relative;
         margin-top: 1rem;
         @include tablet {
-            justify-content: start;
+            justify-content: flex-start;
             margin-top: 2rem;
         }
     }
@@ -93,21 +93,5 @@
         background-color: $green;
         height: 30px;
         width: 120px;
-    }
-    &__archive-link {
-        color: black;
-        text-decoration: none;
-        color: $green;
-        cursor: pointer;
-        &:hover {
-            border-bottom: solid 2px $green;
-            transition: 0.5s;
-            padding-bottom: 0.2rem;
-        }
-    }
-    &__archive{
-        width: 20px;
-        margin-bottom: -0.2rem;
-        margin-left: 0.5rem;
     }
 }

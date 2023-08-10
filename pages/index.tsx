@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Montserrat } from 'next/font/google'
 import styles from '@/styles/Home.module.scss'
 // Components
 import Hero from '@/components/Hero/Hero'
@@ -8,7 +7,6 @@ import FeaturedProjects from '@/components/FeaturedProjects/FeaturedProjects'
 // Data
 import { getFeaturedProjects } from '@/data/projects'
 
-const monserrat = Montserrat({ subsets: ['latin'] });
 
 interface Project {
   date: string,
@@ -39,7 +37,7 @@ export default function Home(props: FeaturedProjectsProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${monserrat.className}`}>
+      <main>
         <Hero />
         <About />
         <FeaturedProjects projects={projects} />

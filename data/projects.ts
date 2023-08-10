@@ -171,6 +171,9 @@ const projects: Project[] = [
         isFeatured:false
     }
 ]
+export const getAllProjects = () => {
+    return projects;
+}
 export const getFeaturedProjects = () => {
     return projects.filter((project) => project.isFeatured);
 }

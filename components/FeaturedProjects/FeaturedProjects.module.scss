@@ -27,3 +27,23 @@
         @include section-title-border;
     }
 }
+.project {
+    &__archive__link {
+        color: black;
+        text-decoration: none;
+        color: $green;
+        display: flex;
+        cursor: pointer;
+        width: fit-content;
+        &:hover {
+            border-bottom: solid 2px $green;
+            transition: 0.5s;
+            padding-bottom: 0.4rem;
+        }
+    }
+    &__archive{
+        width: 20px;
+        margin-bottom: -0.2rem;
+        margin-left: 0.5rem;
+    }
+}

@@ -34,8 +34,8 @@ const FeatureProject = (props: {project: Project}) => {
                 <div className={styles.project__info}>
                     <div className={styles.project__techstacks}>
                         {
-                            skills?.map((skill) => {
-                                return <p className={styles.project__item}>{skill}</p>
+                            skills?.map((skill: string, index: number) => {
+                                return <p key={index} className={styles.project__item}>{skill}</p>
                             })
                         }
                     </div>

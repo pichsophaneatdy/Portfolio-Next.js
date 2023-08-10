@@ -1,0 +1,153 @@
+@use "../../styles/_mixins" as *;
+@use "../../styles/_variables" as *;
+
+.projectPage {
+    background-color: $blue;
+    min-height: 100vh;
+    color: white;
+    padding: 1rem;
+    @include tablet{
+        padding: 1.5rem 7%;
+    }
+    @include desktop {
+        padding: 2.5rem 15%;
+    }
+    &__title {
+        @include page-title;
+    }
+    // Project Tables
+    &__table {
+        width: 100%;
+        padding: 1.5rem 0;
+        font-size: 0.8rem;
+        @include tablet{
+            padding: 2rem 0;
+        }
+    }
+    &__table th {
+        text-align: start;
+        @include tablet{
+            font-size: 0.9rem;
+        }
+    }
+    &__table th, td {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        @include tablet {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        // @include desktop {
+        //     padding-top: 1.5rem;
+        //     padding-bottom: 1.5rem;
+        // }
+    }
+    &__hide {
+        display: none;
+        @include tablet {
+            display: inline-block;
+        }
+    }
+    &__hide2 {
+        display: none;
+        @media screen and (min-width: 450px) {
+            display: inline-block;
+        }
+    }
+    &__hide3 {
+        @include tablet{
+            display: none;
+        }
+    }
+    &__hide4 {
+        @media screen and (max-width: 1279px) {
+            display: none;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: white;
+    }
+    &__icon {
+        width: 15px;
+        margin-left: 0.5rem;
+        margin-bottom: -0.2rem;
+    }
+    &__icon2 {
+        width: 13px;
+        margin-left: 0.5rem;
+        margin-bottom: -0.15rem;
+    }
+    &__name {
+        color:#45FE84;
+        font-weight: 600;
+    }
+    &__single__tech {
+        font-size: 0.7rem;
+        margin-right: 0.5rem;
+        color: #45FE84;
+        background-color: rgba(white, 0.2);
+        padding: 0.2rem 0.75rem;
+        border-radius: 10px;
+    }
+    &__name {
+        @include tablet {
+            width: 35%
+        }
+        @include desktop{
+            width: 25%;
+        }
+    }
+    &__date {
+        width: 25%;
+        @include tablet {
+            width: 20%;
+        }
+        @include desktop{
+            width: 10%;
+        }
+    }
+    &__type {
+        @include tablet{
+            width: 50%;
+        }
+        @include desktop{
+            width: 70%;
+        }
+    }
+    &__techstack {
+        @include desktop {
+            width: 30%;
+        }
+    }
+    &__tech {
+        @include desktop {
+            width: 30%;
+        }
+    }
+}
+.return {
+    &__container {
+        cursor: pointer;
+        gap: 0.3rem;
+        display: flex;
+        align-items: center;
+        padding-bottom: 0.2rem;
+        margin-bottom: 1rem;
+        width: fit-content;
+        &:hover {
+            border-bottom: solid 2px $green;
+            transition: 0.5s;
+        }
+    }
+    &__icon {
+        width: 15px;
+    }
+    &__text {
+        font-size: 0.8rem;
+        color: $green;
+    }
+}
+.link {
+    text-decoration: none;
+}

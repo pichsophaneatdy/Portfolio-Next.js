@@ -5,7 +5,6 @@ import { front_end } from "../../data/skills";
 import { back_end } from "../../data/skills";
 
 const About = () => {
-    console.log(programming_languages)
     return (
         <div className={styles.about}>
             {/* About Title */}
@@ -61,24 +60,24 @@ const About = () => {
                             <p className={styles.about__stack__title}>Programming Languages</p>
                             <div className={styles.about__skills}>
                                 {
-                                    programming_languages?.map((item: string) => {
-                                        return <p className={styles.about__skill}>{item}</p>
+                                    programming_languages?.map((item: string, index: number) => {
+                                        return <p key={index} className={styles.about__skill}>{item}</p>
                                     })
                                 }
                             </div>
                             <p className={styles.about__stack__title}>Front-end Technologies</p>
                             <div className={styles.about__skills}>
                                 {
-                                    front_end?.map((item: string) => {
-                                        return <p className={styles.about__skill}>{item}</p>
+                                    front_end?.map((item: string, index: number) => {
+                                        return <p key={index} className={styles.about__skill}>{item}</p>
                                     })
                                 }
                             </div>
                             <p className={styles.about__stack__title}>Back-end Technologies</p>
                             <div className={styles.about__skills}>
                                 {
-                                    back_end?.map((item: string) => {
-                                        return <p className={styles.about__skill}>{item}</p>
+                                    back_end?.map((item: string, index: number) => {
+                                        return <p key={index} className={styles.about__skill}>{item}</p>
                                     })
                                 }
                             </div>

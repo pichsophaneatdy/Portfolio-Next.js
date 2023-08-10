@@ -126,7 +126,7 @@
         width: 100%;
         display: flex;
         top: 0;
-        justify-content: end;
+        justify-content: flex-end;
         z-index:500;
         @include tablet {
             display: none;
