@@ -1,0 +1,68 @@
+@use "../../styles/_mixins" as *;
+@use "../../styles/_variables" as *;
+
+.experience {
+    background-color: $blue;
+    min-height: 100vh;
+    color: white;
+    padding: 1rem;
+    @include tablet{
+        padding: 1.5rem 7%;
+    }
+    @include desktop {
+        padding: 2.5rem 15%;
+        display: flex;
+        gap: 7rem;
+    }
+    &__title {
+        @include page-title;
+    }
+    &__content {
+        margin-top: 1rem;
+        @include desktop{
+            margin-top: 0;
+        }
+    }
+    &__item {
+        padding: 1.5rem 0;
+        border-bottom: solid 0.3px white;
+        @include desktop{
+            padding-bottom: 1.5rem;
+        }
+    }
+    &__date {
+        color: lightgray;
+        font-size: 0.8rem;
+        margin-bottom: 0.7rem;
+    }
+    &__title1{
+        color: #45FE84;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    &__skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap:0.5rem;
+    }
+    &__desc {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        color: lightgray;
+        line-height: 1.3rem;
+    }
+    &__company {
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+    &__skill {
+        font-size: 0.7rem;
+        color: #45FE84;
+        background-color: rgba(white, 0.2);
+        padding: 0.2rem 0.75rem;
+        border-radius: 10px;
+    }
+}
+.return {
+    @include return-link;
+}

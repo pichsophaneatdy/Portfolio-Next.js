@@ -176,3 +176,25 @@
         font-size: 2.3rem;
     }
 }
+@mixin return-link {
+    &__container {
+        cursor: pointer;
+        gap: 0.3rem;
+        display: flex;
+        align-items: center;
+        padding-bottom: 0.2rem;
+        margin-bottom: 1rem;
+        width: fit-content;
+        &:hover {
+            border-bottom: solid 2px $green;
+            transition: 0.5s;
+        }
+    }
+    &__icon {
+        width: 15px;
+    }
+    &__text {
+        font-size: 0.8rem;
+        color: $green;
+    }
+}
