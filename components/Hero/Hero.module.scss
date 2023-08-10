@@ -1,0 +1,82 @@
+@use "../../styles/_mixins" as *;
+@use "../../styles/_variables" as *;
+.hero {
+    display: flex;
+    height: 88vh;
+    &__left {
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include tablet{
+            padding-left: 7%;
+            width: 50%;
+        }
+        @include desktop{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__right {
+        display: none;
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+            padding-right: 2.5rem;
+        }
+    }
+    &__sun {
+        width: 100px;
+    }
+    &__forest {
+        width: 85%;
+        max-width: 435px;
+        @include desktop{
+            max-width: 600px;
+        }
+    }
+    &__title{
+        font-size: 1.7rem;
+        font-weight: 600;
+        line-height: 2.6rem;
+        @include desktop{
+            font-size: 2.3rem;
+            line-height: 3.2rem;
+        }
+    }
+    &__detail {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 1.5rem 0;
+        line-height: 1.5rem;
+        @include tablet{
+            font-weight: 600;
+            margin: 2rem 0;
+        }
+        @include desktop{
+            font-size: 1.1rem;
+            margin: 2.5rem 0;
+        }
+    }
+    &__name {
+        color: $green;
+    }
+    &__btn {
+        border: solid 1.5px $green;
+        background-color: transparent;
+        color: $green;
+        padding: 0.5rem 1.5rem;
+        border-radius: 25px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 0.8rem;
+        cursor: pointer;
+        @include desktop {
+            font-size: 0.9rem;
+            width: fit-content;
+        }
+    }
+}
