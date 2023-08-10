@@ -3,6 +3,8 @@ import {motion} from "framer-motion";
 import Link from "next/link";
 // Project data
 import { getAllProjects } from "@/data/projects";
+// Componenet
+import Projects_Scroll from "@/components/Projects_Scroll/Projects_Scroll";
 
 interface Project {
     date: string,
@@ -43,7 +45,11 @@ const Projects = (props: {projects: Project[]}) => {
             >
                 All Projects
             </motion.p>
-            {/* <Projects /> */}
+
+            {/* Display all projects in scrolling mode */}
+            <Projects_Scroll projects={projects} />
+
+            {/* Display all projects in table */}
             <motion.table 
                 initial={{y:500}}
                 animate={{y: 0}}
@@ -55,8 +61,8 @@ const Projects = (props: {projects: Project[]}) => {
                         <th className={styles.projectPage__date}>Date</th>
                         <th className={styles.projectPage__name}>Project</th>
                         <th className={`${styles.projectPage__hide2} ${styles.projectPage__type}`}>Type</th>
-                        <th className={`${styles.projectPage__hide2} ${styles.projectPage__tech}`}>Built with</th>
-                        <th className={`${styles.projectPage__hide2} ${styles.projectPage__anchor}`}>Link</th>
+                        <th className={`${styles.projectPage__hide4} ${styles.projectPage__tech}`}>Built with</th>
+                        <th className={`${styles.projectPage__hide} ${styles.projectPage__anchor}`}>Link</th>
                     </tr>
                 </thead>
                 <tbody>
