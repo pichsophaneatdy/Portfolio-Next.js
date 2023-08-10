@@ -33,7 +33,7 @@ const Hero = () => {
                 >
                     <p className={styles.hero__title}>Hello,</p>
                     <p className={styles.hero__title}>This is <span className={styles.hero__name}>Neat.</span></p>
-                    <p className={styles.hero__title}>I am a web developer.</p>
+                    <p className={styles.hero__title}>Code, Create, and Conquer</p>
                 </motion.div>
                 <motion.p 
                     initial={{opacity: 0}}
@@ -44,7 +44,7 @@ const Hero = () => {
                     }}
                     className={styles.hero__detail}
                 >
-                    I make positive impact by building websites. I love three things: coffee, hiking and coding.
+                    I am a web developer based in Vancouver, BC. I love building impactful products.
                 </motion.p>
                 <Link href="/projects">
                     <motion.button

@@ -29,7 +29,7 @@ const About = () => {
                         >
                             <p className={styles.about__question}>How I started coding</p>
                             <p className={styles.about__answer}>
-                                Back in Grade 10, I decided to join a coding competition called “Technovation Girls” with some friends, but never could I ever imagine this coding competition has led me to find my passion for coding and the kind of career I want. 
+                                In grade 10, I built my first android app called “EDMENT” using Scratch. The most exciting part was that EDMENT was released in Google Play Store for a couple months. That is how my coding journey began.
                             </p>
                         </motion.div>
                         <motion.div 
@@ -39,7 +39,7 @@ const About = () => {
                             className={styles.about__detail}
                         >
                             <p className={styles.about__question}>My Education</p>
-                            <p className={styles.about__answer}><span className={styles.m__bottom}>Right after high school in 2020, I decided to pursue a bachelor degree in information technology at Fairleigh Dickinson University, Vancouver.</span><span className="m-bottom">During the last three years in university, I have been introduced to many computer science concepts including object-oriented programming in Java, data structure, algorithms, C#, ASP.Net, JavaScript.</span> <span className="m-bottom">I can't wait to graduate in Decemeber 2023.</span></p>
+                            <p className={styles.about__answer}><span className={styles.m__bottom}>Currently, I am doing my bachelor degree in information technology, where I learn about object-oriented programming in Java, Python, C#, data structure and algorithm. I am excited to finish it in December 2023.</span></p>
                         </motion.div>
                         <motion.div 
                             initial={{opacity: 0}}
@@ -48,7 +48,7 @@ const About = () => {
                             className={styles.about__detail}
                         >
                             <p className={styles.about__question}>My Professional Experience</p>
-                            <p className={styles.about__answer}>Since August 2022, I have been working as a Student IT Assistant at Fairleigh Dickinson University. I really enjoy providing technical support to students. staff, and faculty.</p>
+                            <p className={styles.about__answer}>Since August 2022, I have been working as a Student IT Assistant. I specialize in software troubleshooting, networking and server infrastructure.</p>
                         </motion.div>
                         <motion.div 
                             initial={{opacity: 0}}
