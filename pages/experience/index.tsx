@@ -43,9 +43,9 @@ const Experience = (props: {experience: Experience[]}) => {
                     experience?.map((experience, index) => {
                         return (
                             <motion.div 
-                                initial={{y:700}}
-                                animate={{y:0}}
-                                transition={{duration: 2, delay: index+1}}
+                                initial={{x:1000}}
+                                animate={{x:0}}
+                                transition={{duration: 2, delay: index+0.5}}
                                 key={index} 
                                 className={styles.experience__item}
                             >

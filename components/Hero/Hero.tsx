@@ -21,8 +21,8 @@ const Hero = () => {
     }
     return (
         <div className={styles.hero}>
-            {/* Description on the left */}
-            <div className={styles.hero__left}>
+            {/* Container 1: Name, Role, Description */}
+            <div className={styles.hero__container1}>
                 <motion.div 
                     initial={{opacity: 0}}
                     animate={{opacity:100}}
@@ -31,9 +31,8 @@ const Hero = () => {
                     }}
                     className={styles.hero__desc}
                 >
-                    <p className={styles.hero__title}>Hello,</p>
-                    <p className={styles.hero__title}>This is <span className={styles.hero__name}>Neat.</span></p>
-                    <p className={styles.hero__title}>Code, Create, and Conquer</p>
+                    <p className={styles.hero__subtitle}>Hello, This is Neat</p>
+                    <p className={styles.hero__title}><span className={styles.hero__full__title}>Full-Stack </span>Web Developer</p>
                 </motion.div>
                 <motion.p 
                     initial={{opacity: 0}}
@@ -44,9 +43,9 @@ const Hero = () => {
                     }}
                     className={styles.hero__detail}
                 >
-                    I am a web developer based in Vancouver, BC. I love building impactful products.
+                    I love building impactful products, and in fact, I built my first andriod app in grade 10.
                 </motion.p>
-                <Link href="/projects">
+                {/* <Link href="/projects">
                     <motion.button
                         variants={buttonVariants}
                         initial="initial"
@@ -55,50 +54,23 @@ const Hero = () => {
                         className={styles.hero__btn}>
                         Check out my projects
                     </motion.button>
-                </Link>
+                </Link> */}
             </div>
-            {/* Images on the right */}
-            <div className={styles.hero__right}>
-                <motion.img 
-                    src="/assets/sun.png" 
-                    alt="sun"
-                    className={styles.hero__sun}
-                    initial={{
-                        x: 300
-                    }}
-                    animate={{
-                        x: 0
-                    }}
-                    transition={{
-                        delay: 1.5,
-                        duration: 1
-                    }}
-                    whileInView={{
-                        scale: [1,1.1,1,1.1,1],
-                        y: [-30,0,-30],
-                        transition: {
-                            duration: 6,
-                            repeat: Infinity
-                        }
-                    }}
-                >
-                </motion.img>
-                <motion.img 
-                    initial={{
-                        scale: 0
-                    }}  
-                    animate={{
-                        scale: 1
-                    }}
-                    transition={{
-                        delay: 1.5,
-                        duration: 2
-                    }}
-                    src="/assets/forests.png" 
-                    alt="sun"
-                    className={styles.hero__forest}
-                >
-                </motion.img>
+            {/* Achievement + Techstack Container */}
+            <div className={styles.hero__container2}>
+                <div className={styles.hero__container4}>
+                    {/* Projects completed */}
+                    <div className={styles.hero__container3}>
+                        <p className={styles.hero__statistic}>15</p>
+                        <p className={styles.hero__statictic__detail}><span className={styles.hero__block}>PROJECTS</span> COMPLETED</p>
+                    </div>
+                    {/* Hackathons */}
+                    <div className={styles.hero__container3}>
+                            <p className={styles.hero__statistic}>3</p>
+                            <p className={styles.hero__statictic__detail}><span className={styles.hero__block}>HACKATHON</span> PARTICIPATIONS</p>
+                    </div>
+                </div>
+                {/* Techstacks */}
             </div>
     </div>
     )

@@ -104,6 +104,7 @@ const Projects = (props: {projects: Project[]}) => {
 
 export async function getStaticProps() {
     const projects = await getAllProjects();
+    console.log(projects.length)
     return {
         props: {projects: projects}
     }
