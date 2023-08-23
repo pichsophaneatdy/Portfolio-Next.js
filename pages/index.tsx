@@ -39,6 +39,7 @@ export default function Home(props: FeaturedProjectsProps) {
       </Head>
       <main>
         <Hero />
+        <FeaturedProjects projects={props.projects} />
       </main>
     </>
   )

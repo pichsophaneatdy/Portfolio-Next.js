@@ -20,8 +20,9 @@ interface Project {
 const FeaturedProjects = (props: {projects: Project[]}) => {
     return (
         <div className={styles.projects}>
+            <h1>Featured Projects</h1>
             {/* Section Title */}
-            <motion.div
+            {/* <motion.div
                 initial={{opacity: 0}}
                 whileInView={{opacity:1}}
                 transition={{duration: 1.5, delay: 0.5}}
@@ -29,20 +30,20 @@ const FeaturedProjects = (props: {projects: Project[]}) => {
             >
                 <h1 className={styles.projects__title}>FEATURED PROJECTS</h1>
                 <div className={styles.projects__border}></div>
-            </motion.div>
+            </motion.div> */}
             {/* Render the project */}
-            {
+            {/* {
                 props.projects?.map((project: Project, index: number) => {
                     return <FeatureProject key={index} project={project}/>
                 })
-            }
+            } */}
             {/* Link to full projects archive */}
-            <Link href="/projects"  className={styles.project__archive__link}>
+            {/* <Link href="/projects"  className={styles.project__archive__link}>
                 <p>
                     View Full Project Archive
                 </p>
                 <img src="/assets/link.png" alt="link icon" className={styles.project__archive}/>
-            </Link>
+            </Link> */}
         </div>
     )
 }

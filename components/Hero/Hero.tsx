@@ -3,8 +3,15 @@ import Image from "next/image";
 // Font - Staatliches
 import { Staatliches } from "next/font/google";
 const staatliches = Staatliches({ subsets: ['latin'], weight: "400" });
+// Animation - Framer Motion
+import {motion, useTime, useTransform} from "framer-motion";
 
 const Hero = () => {
+
+    // Animation
+    const time = useTime();
+    const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
+
     return (
         <div className={`${styles.hero} ${staatliches.className}`}>
             {/* Container 1: Intro */}
@@ -25,14 +32,45 @@ const Hero = () => {
             </div>
             {/* Contact Link */}
             <div className={styles.hero__container4}>
-                <Image width={35} height={35} style={{objectFit: "cover"}} src="/assets/github.png" alt="Github Icon"/>
-                <Image width={35} height={35} style={{objectFit: "cover"}} src="/assets/linkedin.png" alt="Linkedin Icon"/>
-                <Image width={35} height={35} style={{objectFit: "cover"}} src="/assets/email.png" alt="Email Icon"/>
+                <motion.a 
+                    href="#"
+                    whileHover={{
+                        rotate: 90,
+                        transition:{duration: 0.5}
+                    }}
+                >
+                    <Image width={35} height={35} style={{objectFit: "cover"}} src="/assets/github.png" alt="Github Icon"/>
+                </motion.a>
+                <motion.a 
+                    href="#"
+                    whileHover={{
+                        rotate: 90,
+                        transition:{duration: 0.5}
+                    }}
+                >
+                    <Image width={35} height={35} style={{objectFit: "cover"}} src="/assets/linkedin.png" alt="Github Icon"/>
+                </motion.a>
+                <motion.a 
+                    href="#"
+                    whileHover={{
+                        rotate: 90,
+                        transition:{duration: 0.5}
+                    }}
+                >
+                    <Image width={35} height={35} style={{objectFit: "cover"}} src="/assets/email.png" alt="Github Icon"/>
+                </motion.a>
             </div>
             {/* Next Icon */}
-            <div className={styles.hero__next}>
+            <motion.div 
+                style={{rotate}} 
+                whileHover={{
+                    scale: 1.2,
+                    transition: {duration: 0.3}
+                }}  
+                className={styles.hero__next}
+            >
                 <Image className={styles.hero__next__icon} width={45} height={45} src="/assets/nextIcon.png" alt="Next Icon"/>
-            </div>
+            </motion.div>
         </div>
     )
 }
