@@ -39,8 +39,6 @@ export default function Home(props: FeaturedProjectsProps) {
       </Head>
       <main>
         <Hero />
-        <About />
-        <FeaturedProjects projects={projects} />
       </main>
     </>
   )

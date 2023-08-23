@@ -1,107 +1,89 @@
 @use "../../styles/_mixins" as *;
 @use "../../styles/_variables" as *;
 .hero {
+    height: 100vh;
+    background: linear-gradient(45deg, $primary-color, $highlight-color, $highlight-color2);
     display: flex;
     flex-direction: column;
-    height: 88vh;
     justify-content: center;
-    &__container1 {
-        padding: 0 1.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    @include tablet {
+        padding: 0 7%;
     }
-    &__title{
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 2.6rem;
-        color: $green;
+    @include desktop {
+        padding: 0 15%;
+    }
+    @include large-desktop{
+        padding: 0 20%;
+    }
+    &__title {
+        font-size: 3rem;
         @include tablet{
-            font-size: 2.3rem;
+            font-size: 4.5rem;
         }
         @include desktop{
-            font-size: 2.5rem;
-            line-height: 3.2rem;
+            font-size: 5.5rem;
         }
     }
-    &__full__title {
+    &__hide {
         display: none;
         @include tablet{
             display: inline;
         }
     }
-    &__subtitle {
-        font-size: 1.2rem;
-        font-weight: 600;
-        line-height: 2.6rem;
-        @include desktop{
-            font-size: 1.8rem;
-            line-height: 3.2rem;
-        }
-    }
-    &__detail {
-        font-size: 0.9rem;
-        font-weight: 500;
-        margin: 1.5rem 0;
-        line-height: 1.5rem;
-        @include tablet{
-            font-weight: 600;
-            margin: 2rem 0;
-        }
-        @include desktop{
-            font-size: 1.1rem;
-            margin: 2.5rem 0;
-            line-height: 2rem;
-        }
-    }
-    &__name {
-        color: $green;
-    }
-    &__btn {
-        border: solid 2px $green;
-        background-color: transparent;
-        color: $green;
-        padding: 0.5rem 1.5rem;
-        border-radius: 25px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 0.8rem;
-        cursor: pointer;
-        @include desktop {
-            font-size: 0.9rem;
-            width: fit-content;
-        }
-    }
-    &__statistic{
-        font-size: 3.5rem;
-        font-weight: bolder;
-        &__detail {
-            font-weight: 700;
-        }
-    }
-    &__block{
+    &__block {
         display: block;
     }
-    &__container2{
+    &__container2 {
         display: flex;
         flex-direction: column;
         margin: 2rem 0;
+        @include tablet{
+            margin: 3rem 0;
+        }
         @include desktop{
-            display: row;
+            flex-direction: row;
+            gap: 5rem;
         }
     }
-    &__container3{
+    &__container3 {
         display: flex;
+        gap: 2rem;
         align-items: center;
-        justify-content: space-evenly;
-        gap: 1.5rem;
-        text-align: end;
+    }
+    &__text1 {
+        font-size: 5rem;
+        @include tablet{
+            font-size: 6rem;
+        }
+    }
+    &__text2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        @include tablet{
+            font-size: 1.5rem;
+        }
     }
     &__container4{
         display: flex;
-        flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
     }
-
+    &__next {
+        cursor: pointer;
+        position:fixed;
+        bottom: 2rem;
+        right: 2rem;
+        @include tablet {
+            bottom: 4rem;
+            right: 7%;
+        }
+        @include desktop{
+            right: 15%;
+        }
+    }
+    &__next__icon {
+        border-radius: 50%;
+        box-shadow: 0 0 20px white;
+    }
 }
