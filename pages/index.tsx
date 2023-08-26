@@ -6,7 +6,10 @@ import About from '@/components/About/About'
 import FeaturedProjects from '@/components/FeaturedProjects/FeaturedProjects'
 // Data
 import { getFeaturedProjects } from '@/data/projects'
+// Font
+import { Oswald } from 'next/font/google'
 
+const oswald = Oswald({ subsets: ['latin'] });
 
 interface Project {
   date: string,
@@ -37,7 +40,7 @@ export default function Home(props: FeaturedProjectsProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={oswald.className}>
         <Hero />
         <FeaturedProjects projects={props.projects} />
       </main>

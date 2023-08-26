@@ -3,8 +3,8 @@ import FeatureProject from "../FeatureProject/FeatureProject";
 import styles from "./FeaturedProjects.module.scss";
 import Link from "next/link";
 
-
 interface Project {
+    id: number,
     date: string,
     type: string, 
     name: string
@@ -19,32 +19,15 @@ interface Project {
 }
 const FeaturedProjects = (props: {projects: Project[]}) => {
     return (
-        <div className={styles.projects}>
-            <h1>Featured Projects</h1>
-            {/* Section Title */}
-            {/* <motion.div
-                initial={{opacity: 0}}
-                whileInView={{opacity:1}}
-                transition={{duration: 1.5, delay: 0.5}}
-                className={styles.projects__title__container}
-            >
-                <h1 className={styles.projects__title}>FEATURED PROJECTS</h1>
-                <div className={styles.projects__border}></div>
-            </motion.div> */}
-            {/* Render the project */}
-            {/* {
-                props.projects?.map((project: Project, index: number) => {
-                    return <FeatureProject key={index} project={project}/>
+        <section className={styles.projects}>
+            <h2 className={styles.projects__title}>FEATURED PROJECTS</h2>
+            {/* Render Project */}
+            {
+                props.projects.map((project) => {
+                    return <FeatureProject key={project.id} project={project} />
                 })
-            } */}
-            {/* Link to full projects archive */}
-            {/* <Link href="/projects"  className={styles.project__archive__link}>
-                <p>
-                    View Full Project Archive
-                </p>
-                <img src="/assets/link.png" alt="link icon" className={styles.project__archive}/>
-            </Link> */}
-        </div>
+            }
+        </section>
     )
 }
 

@@ -33,7 +33,8 @@ const Hero = () => {
             {/* Contact Link */}
             <div className={styles.hero__container4}>
                 <motion.a 
-                    href="#"
+                    target="_blank"
+                    href="https://github.com/pichsophaneatdy"
                     whileHover={{
                         rotate: 90,
                         transition:{duration: 0.5}
@@ -42,7 +43,8 @@ const Hero = () => {
                     <Image width={35} height={35} style={{objectFit: "cover"}} src="/assets/github.png" alt="Github Icon"/>
                 </motion.a>
                 <motion.a 
-                    href="#"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/pichsophaneat/"
                     whileHover={{
                         rotate: 90,
                         transition:{duration: 0.5}
@@ -51,7 +53,8 @@ const Hero = () => {
                     <Image width={35} height={35} style={{objectFit: "cover"}} src="/assets/linkedin.png" alt="Github Icon"/>
                 </motion.a>
                 <motion.a 
-                    href="#"
+                    target="_blank"
+                    href="mailto:pichsophaneat@gmail.com"
                     whileHover={{
                         rotate: 90,
                         transition:{duration: 0.5}
@@ -60,17 +63,6 @@ const Hero = () => {
                     <Image width={35} height={35} style={{objectFit: "cover"}} src="/assets/email.png" alt="Github Icon"/>
                 </motion.a>
             </div>
-            {/* Next Icon */}
-            <motion.div 
-                style={{rotate}} 
-                whileHover={{
-                    scale: 1.2,
-                    transition: {duration: 0.3}
-                }}  
-                className={styles.hero__next}
-            >
-                <Image className={styles.hero__next__icon} width={45} height={45} src="/assets/nextIcon.png" alt="Next Icon"/>
-            </motion.div>
         </div>
     )
 }

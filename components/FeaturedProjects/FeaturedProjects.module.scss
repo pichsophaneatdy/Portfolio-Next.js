@@ -2,48 +2,11 @@
 @use "../../styles/_variables" as *;
 
 .projects {
-    // margin-bottom: 3rem;
-    // padding: 0 1rem 3rem 1rem;
-    // @include tablet {
-    //     margin: 3.5rem 7% 0 7%;
-    // }
-    // @include desktop{
-    //     padding: 0 10% 3rem 10%;
-    // }
-    // &__title__container {
-    //     @include section-title-container;
-    //     margin-bottom: 4rem;
-    //     @include tablet {
-    //         margin-bottom: 5rem;
-    //     }
-    //     @include desktop{
-    //         margin-bottom: 5rem;
-    //     }
-    // }
-    // &__title {
-    //     @include section-title;
-    // }
-    // &__border {
-    //     @include section-title-border;
-    // }
-}
-.project {
-    // &__archive__link {
-    //     color: black;
-    //     text-decoration: none;
-    //     color: $green;
-    //     display: flex;
-    //     cursor: pointer;
-    //     width: fit-content;
-    //     &:hover {
-    //         border-bottom: solid 2px $green;
-    //         transition: 0.5s;
-    //         padding-bottom: 0.4rem;
-    //     }
-    // }
-    // &__archive{
-    //     width: 20px;
-    //     margin-bottom: -0.2rem;
-    //     margin-left: 0.5rem;
-    // }
+    padding: 3rem 1rem;
+    @include tablet{
+        padding: 4rem 7%;
+    }
+    @include desktop{
+        padding: 5rem 15%;
+    }
 }
